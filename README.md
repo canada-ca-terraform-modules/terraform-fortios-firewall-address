@@ -26,7 +26,7 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_addresses"></a> [addresses](#input\_addresses) | List of addresses | `map(object)` | n/a | yes |
+| <a name="input_addresses"></a> [addresses](#input\_addresses) | List of addresses | `map(object())` | n/a | yes |
 
 ## Outputs
 

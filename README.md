@@ -1,8 +1,12 @@
 <!-- BEGIN_TF_DOCS -->
 ## Usage
 ```hcl
+module "my_firewall_addresses" {
+  source = "https://github.com/canada-ca-terraform-modules/terraform-fortios-firewall-address"
+  providers = {
+    fortios = fortios.my_alias
+  }
 
-locals {
   my_addresses = {
     cloudflare_dns = {
       subnet = "1.1.1.1/32"
@@ -29,15 +33,6 @@ locals {
       }
     }
   }
-}
-
-module "my_firewall_addresses" {
-  source = "https://github.com/canada-ca-terraform-modules/terraform-fortios-firewall-address"
-  providers = {
-    fortios = fortios.my_alias
-  }
-
-  addresses = local.my_addresses
 }
 ```
 
